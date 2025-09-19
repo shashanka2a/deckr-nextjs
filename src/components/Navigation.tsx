@@ -6,21 +6,30 @@ export function Navigation() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-              </svg>
+          <div className="flex items-center gap-3">
+            <div className="relative">
+              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </div>
+              {/* AI indicator */}
+              <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs font-bold">AI</span>
+              </div>
             </div>
-            <span className="text-xl text-slate-900">Deckr</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-slate-900 leading-none">Deckr</span>
+              <span className="text-xs text-slate-500 leading-none">AI Pitch Generator</span>
+            </div>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-slate-600 hover:text-teal-600 transition-colors">Features</a>
-            <a href="#how-it-works" className="text-slate-600 hover:text-teal-600 transition-colors">How it works</a>
+            <a href="#features" className="text-slate-600 hover:text-teal-600 transition-colors">How it works</a>
             <a href="#templates" className="text-slate-600 hover:text-teal-600 transition-colors">Templates</a>
             <a href="#pricing" className="text-slate-600 hover:text-teal-600 transition-colors">Pricing</a>
+            <a href="#contact" className="text-slate-600 hover:text-teal-600 transition-colors">Contact</a>
           </div>
 
           {/* CTA Buttons */}
@@ -28,8 +37,8 @@ export function Navigation() {
             <Button variant="ghost" className="hidden sm:inline-flex text-slate-600 hover:text-slate-900">
               Sign in
             </Button>
-            <Button className="bg-teal-600 hover:bg-teal-700 text-white">
-              Get Started
+            <Button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white font-medium">
+              Generate Deck
             </Button>
           </div>
         </div>
