@@ -1,53 +1,67 @@
 export function Features() {
-  const features = [
+  const steps = [
     {
+      number: "01",
+      title: "Describe Your Idea",
+      subtitle: "AI Analysis built-in",
+      description: "Tell our AI about your business concept, target market, and funding goals. Our intelligent system analyzes your idea and identifies key value propositions.",
       icon: (
         <div className="relative">
-          <div className="w-12 h-8 bg-white rounded border-2 border-teal-200 relative">
-            <div className="absolute inset-1 bg-gradient-to-r from-teal-50 to-blue-50 rounded"></div>
-            <div className="absolute top-1 left-1 w-2 h-2 bg-teal-500 rounded animate-bounce"></div>
-            <div className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded animate-bounce delay-100"></div>
-            <div className="absolute bottom-1 left-1 w-2 h-2 bg-teal-400 rounded animate-bounce delay-200"></div>
+          <div className="w-16 h-12 bg-white rounded-xl border-2 border-slate-200 shadow-lg">
+            <div className="p-3 space-y-2">
+              <div className="h-2 bg-slate-300 rounded w-full"></div>
+              <div className="h-1 bg-slate-200 rounded w-4/5"></div>
+              <div className="h-1 bg-slate-200 rounded w-3/5"></div>
+            </div>
+            <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full flex items-center justify-center">
+              <span className="text-white text-xs font-bold">AI</span>
+            </div>
           </div>
-          <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full animate-pulse"></div>
         </div>
-      ),
-      title: "AI-Powered Analysis",
-      description: "Our AI analyzes your business concept and generates investor-ready content automatically.",
-      features: ["Smart Content Generation", "Market Analysis"]
+      )
     },
     {
+      number: "02",
+      title: "AI Generates Slides",
+      subtitle: "Investor-tested layouts",
+      description: "Our AI creates funding stage–ready slides with market research, financial projections, and compelling visuals tailored to your industry.",
       icon: (
         <div className="relative">
-          <div className="w-12 h-8 bg-white rounded border-2 border-green-200 relative">
-            <div className="absolute inset-1 bg-gradient-to-r from-green-50 to-teal-50 rounded"></div>
-            <div className="absolute top-1 left-1 w-2 h-2 bg-green-500 rounded animate-pulse"></div>
-            <div className="absolute top-1 right-1 w-2 h-2 bg-teal-500 rounded animate-pulse delay-500"></div>
-            <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-green-300 rounded animate-bounce"></div>
+          <div className="w-16 h-12 bg-gradient-to-r from-teal-50 to-blue-50 rounded-xl border-2 border-teal-200 shadow-lg">
+            <div className="p-3 space-y-2">
+              <div className="flex items-center gap-1">
+                <div className="w-1 h-1 bg-teal-500 rounded-full animate-pulse"></div>
+                <div className="w-1 h-1 bg-blue-500 rounded-full animate-pulse delay-100"></div>
+                <div className="w-1 h-1 bg-teal-500 rounded-full animate-pulse delay-200"></div>
+              </div>
+              <div className="h-2 bg-gradient-to-r from-teal-300 to-blue-300 rounded w-full animate-pulse"></div>
+              <div className="h-1 bg-gradient-to-r from-teal-200 to-blue-200 rounded w-3/4 animate-pulse delay-300"></div>
+            </div>
           </div>
-          <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
         </div>
-      ),
-      title: "Professional Templates",
-      description: "Choose from investor-tested templates designed for different industries and funding stages.",
-      features: ["Industry-Specific", "Funding Stage Ready"]
+      )
     },
     {
+      number: "03",
+      title: "Export & Present",
+      subtitle: "PDF/PowerPoint ready instantly",
+      description: "Download your professional pitch deck in multiple formats. Ready for investor meetings, presentations, and funding rounds.",
       icon: (
         <div className="relative">
-          <div className="w-12 h-8 bg-white rounded border-2 border-blue-200 relative">
-            <div className="absolute inset-1 bg-gradient-to-r from-blue-50 to-indigo-50 rounded"></div>
-            <div className="absolute top-1 left-1 w-2 h-2 bg-blue-500 rounded"></div>
-            <div className="absolute top-1 right-1 w-2 h-2 bg-indigo-500 rounded"></div>
-            <div className="absolute bottom-1 left-1 w-2 h-2 bg-blue-400 rounded"></div>
-            <div className="absolute top-0 right-0 w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
+          <div className="w-16 h-12 bg-white rounded-xl border-2 border-teal-300 shadow-lg">
+            <div className="p-3 space-y-1">
+              <div className="h-2 bg-teal-500 rounded w-full"></div>
+              <div className="h-1 bg-teal-300 rounded w-5/6"></div>
+              <div className="h-1 bg-teal-300 rounded w-4/5"></div>
+            </div>
+            <div className="absolute -top-2 -right-2 w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center animate-bounce">
+              <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
           </div>
-          <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
         </div>
-      ),
-      title: "Instant Export",
-      description: "Export your pitch deck in multiple formats ready for presentations and investor meetings.",
-      features: ["PDF Export", "Presentation Ready"]
+      )
     }
   ];
 
@@ -56,43 +70,114 @@ export function Features() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl text-slate-900 mb-6 font-bold">
-            AI-powered pitch deck generation
-            <span className="text-teal-600"> in minutes</span>
+            From idea to investor-ready pitch deck
+            <span className="text-teal-600"> in 3 steps</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Transform your business idea into a professional pitch deck with our intelligent AI system.
+            Our AI transforms your business concept into a professional pitch deck with investor-tested layouts and funding stage–ready content.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="group p-8 rounded-2xl border border-slate-100 hover:border-teal-200 hover-lift hover-glow transition-all duration-300"
-            >
-              <div className="w-16 h-16 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:bg-teal-100 group-hover:scale-110 transition-all duration-300">
-                {feature.icon}
-              </div>
-              
-              <h3 className="text-2xl text-slate-900 mb-4 group-hover:text-teal-700 transition-colors duration-300 font-bold">
-                {feature.title}
-              </h3>
-              
-              <p className="text-slate-600 leading-relaxed mb-6">
-                {feature.description}
-              </p>
-              
-              {/* Feature list */}
-              <div className="space-y-2">
-                {feature.features.map((item, itemIndex) => (
-                  <div key={itemIndex} className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-600">{item}</span>
+        {/* Desktop: Horizontal Timeline */}
+        <div className="hidden lg:block">
+          <div className="relative max-w-6xl mx-auto">
+            {/* Timeline line */}
+            <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-teal-200 via-teal-300 to-teal-200"></div>
+            
+            <div className="flex justify-between items-start">
+              {steps.map((step, index) => (
+                <div key={index} className="flex-1 text-center group">
+                  {/* Step Icon */}
+                  <div className="relative mb-8">
+                    <div className="w-24 h-24 mx-auto bg-gradient-to-br from-slate-50 to-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-slate-100">
+                      {step.icon}
+                    </div>
+                    
+                    {/* Step number */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      {step.number}
+                    </div>
                   </div>
-                ))}
+
+                  {/* Content */}
+                  <div className="space-y-4 max-w-xs mx-auto">
+                    <div className="inline-flex items-center px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">
+                      {step.subtitle}
+                    </div>
+                    
+                    <h3 className="text-2xl text-slate-900 font-bold">
+                      {step.title}
+                    </h3>
+                    
+                    <p className="text-slate-600 leading-relaxed text-sm">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile: Vertical Stack */}
+        <div className="lg:hidden space-y-12">
+          {steps.map((step, index) => (
+            <div key={index} className="text-center group">
+              {/* Step Icon */}
+              <div className="relative mb-8">
+                <div className="w-24 h-24 mx-auto bg-gradient-to-br from-slate-50 to-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-slate-100">
+                  {step.icon}
+                </div>
+                
+                {/* Step number */}
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  {step.number}
+                </div>
               </div>
+
+              {/* Content */}
+              <div className="space-y-4">
+                <div className="inline-flex items-center px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">
+                  {step.subtitle}
+                </div>
+                
+                <h3 className="text-2xl text-slate-900 font-bold">
+                  {step.title}
+                </h3>
+                
+                <p className="text-slate-600 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+
+              {/* Step separator (except for last item) */}
+              {index < steps.length - 1 && (
+                <div className="mt-12 flex items-center justify-center">
+                  <div className="w-16 h-px bg-teal-200"></div>
+                  <div className="mx-4 w-2 h-2 bg-teal-300 rounded-full"></div>
+                  <div className="w-16 h-px bg-teal-200"></div>
+                </div>
+              )}
             </div>
           ))}
+        </div>
+
+        {/* CTA Reinforcement */}
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl p-6 border border-teal-100 hover:shadow-lg transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl flex items-center justify-center">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div className="text-left">
+              <h3 className="text-xl font-bold text-slate-900">Ready to generate your pitch deck?</h3>
+              <p className="text-slate-600">Transform your idea into investor-ready slides in minutes</p>
+            </div>
+            <button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              Generate Your Pitch Deck →
+            </button>
+          </div>
         </div>
       </div>
     </section>
