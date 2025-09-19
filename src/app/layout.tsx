@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Deckr - Tell Your Story",
-  description: "Create stunning presentations that captivate your audience. Deckr makes it simple to design, collaborate, and share your ideas.",
-  keywords: ["presentations", "design", "collaboration", "storytelling", "slides"],
+  title: "Deckr - Create decks in minutes, not hours",
+  description: "Build stunning presentations with drag & drop simplicity. Collaborate in real-time and share instantly. Start free today.",
+  keywords: ["presentations", "design", "collaboration", "storytelling", "slides", "fast", "simple"],
   authors: [{ name: "Deckr Team" }],
   openGraph: {
-    title: "Deckr - Tell Your Story",
-    description: "Create stunning presentations that captivate your audience.",
+    title: "Deckr - Create decks in minutes, not hours",
+    description: "Build stunning presentations with drag & drop simplicity. Start free today.",
     type: "website",
   },
 };

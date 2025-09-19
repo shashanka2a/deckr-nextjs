@@ -20,67 +20,56 @@ export function Hero() {
                 Design. Create. Share.
               </div>
               
-              <h1 className="text-5xl lg:text-7xl text-slate-900 tracking-tight leading-tight">
-                Tell your
-                <span className="block text-teal-600 relative">
-                  story.
-                  <svg className="absolute -bottom-4 left-0 w-full h-4" viewBox="0 0 200 20" fill="none">
-                    <path d="M5 15C50 5 150 5 195 15" stroke="currentColor" strokeWidth="3" fill="none" className="text-teal-300"/>
-                  </svg>
-                </span>
+              <h1 className="text-4xl lg:text-6xl text-slate-900 tracking-tight leading-tight font-bold">
+                Create decks in minutes, not hours.
               </h1>
               
               <p className="text-xl text-slate-600 max-w-lg leading-relaxed">
-                Create stunning presentations that captivate your audience. 
-                Deckr makes it simple to design, collaborate, and share your ideas.
+                Build stunning presentations with drag & drop simplicity. 
+                Collaborate in real-time and share instantly.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                Start Creating
-              </Button>
-              <Button variant="outline" className="border-teal-200 text-teal-700 hover:bg-teal-50 px-8 py-3 text-lg transition-all duration-300 hover:scale-105">
-                Watch Demo
+            <div className="flex justify-center lg:justify-start">
+              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-10 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                Start Free
               </Button>
             </div>
             
-            {/* Stats */}
-            <div className="flex justify-center lg:justify-start gap-8 pt-8">
-              <div className="text-center">
-                <div className="text-2xl text-slate-900 mb-1">50k+</div>
-                <div className="text-sm text-slate-500">Creators</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl text-slate-900 mb-1">1M+</div>
-                <div className="text-sm text-slate-500">Presentations</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl text-slate-900 mb-1">99%</div>
-                <div className="text-sm text-slate-500">Satisfaction</div>
-              </div>
-            </div>
           </div>
           
-          {/* Right content - Hero image */}
+          {/* Right content - Animated illustration */}
           <div className="relative">
             <div className="relative z-10 transform hover:scale-105 transition-transform duration-700">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1705909773420-8d7af2a343f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU3ODMxMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Modern workspace design"
-                  width={1080}
-                  height={500}
-                  className="w-full h-96 lg:h-[500px] object-cover"
-                  priority
-                />
+              <div className="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-teal-50 to-white p-8">
+                {/* Animated deck building illustration */}
+                <div className="relative w-full h-96 lg:h-[500px] flex items-center justify-center">
+                  {/* Laptop mockup */}
+                  <div className="relative w-80 h-48 bg-slate-800 rounded-lg shadow-2xl">
+                    <div className="absolute inset-2 bg-white rounded">
+                      {/* Animated slides being built */}
+                      <div className="p-4 space-y-2">
+                        <div className="h-3 bg-teal-200 rounded animate-pulse"></div>
+                        <div className="h-2 bg-slate-200 rounded w-3/4 animate-pulse delay-100"></div>
+                        <div className="h-2 bg-slate-200 rounded w-1/2 animate-pulse delay-200"></div>
+                        <div className="h-8 bg-teal-100 rounded mt-4 animate-pulse delay-300"></div>
+                      </div>
+                    </div>
+                    {/* Screen glow */}
+                    <div className="absolute inset-0 bg-teal-400 opacity-20 rounded-lg animate-pulse"></div>
+                  </div>
+                  
+                  {/* Floating elements */}
+                  <div className="absolute top-4 right-4 w-6 h-6 bg-teal-500 rounded-full animate-bounce"></div>
+                  <div className="absolute bottom-4 left-4 w-4 h-4 bg-teal-300 rounded-full animate-bounce delay-500"></div>
+                </div>
               </div>
             </div>
             
             {/* Floating elements */}
             <div className="absolute -top-6 -left-6 bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm text-slate-600">Live collaboration</span>
               </div>
             </div>
