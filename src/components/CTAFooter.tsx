@@ -22,7 +22,7 @@ export function CTAFooter() {
 
           <div className="flex justify-center mb-8">
             <Button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-12 py-4 text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl font-bold hover-glow">
-              Generate Pitch Deck
+              Generate My Pitch Deck
             </Button>
           </div>
 

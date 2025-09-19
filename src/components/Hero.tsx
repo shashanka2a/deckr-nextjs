@@ -30,7 +30,7 @@ export function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-12 py-4 text-xl transition-all duration-300 hover:scale-105 hover:shadow-xl font-bold hover-glow">
-                Generate Pitch Deck
+                Generate My Pitch Deck
               </Button>
               <p className="text-sm text-slate-500">No credit card required • Free to start</p>
             </div>

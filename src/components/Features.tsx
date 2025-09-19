@@ -132,14 +132,32 @@ export function Features() {
                           {step.description}
                         </p>
 
-                        {/* Interactive Element */}
+                        {/* Inline Mini CTA */}
                         <div className="pt-4">
-                          <div className="inline-flex items-center text-teal-600 font-semibold group-hover:text-teal-700 transition-colors duration-300">
-                            <span className="mr-2">Learn more</span>
-                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </div>
+                          {index === 0 && (
+                            <button className="inline-flex items-center px-6 py-3 bg-white border-2 border-teal-200 text-teal-700 rounded-full text-sm font-semibold hover:bg-teal-50 hover:border-teal-300 transition-all duration-300 shadow-sm hover:shadow-md">
+                              <span className="mr-2">Try Input Demo</span>
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </button>
+                          )}
+                          {index === 1 && (
+                            <button className="inline-flex items-center px-6 py-3 bg-white border-2 border-teal-200 text-teal-700 rounded-full text-sm font-semibold hover:bg-teal-50 hover:border-teal-300 transition-all duration-300 shadow-sm hover:shadow-md">
+                              <span className="mr-2">See Sample Output</span>
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </button>
+                          )}
+                          {index === 2 && (
+                            <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-full text-sm font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
+                              <span className="mr-2">Generate My Pitch Deck</span>
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                              </svg>
+                            </button>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -161,12 +179,12 @@ export function Features() {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Onboarding CTA */}
         <div className="text-center mt-24">
-          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-full text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
-            <span className="mr-3">Start Creating Your Deck</span>
-            <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          <div className="inline-flex items-center px-8 py-4 bg-white border-2 border-teal-300 text-teal-700 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer hover:bg-teal-50 hover:border-teal-400">
+            <span className="mr-3">See It in Action</span>
+            <svg className="w-5 h-5 transform hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
         </div>

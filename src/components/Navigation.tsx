@@ -29,7 +29,7 @@ export function Navigation() {
               Sign in
             </Button>
             <Button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white font-medium">
-              Generate Deck
+              Generate My Pitch Deck
             </Button>
           </div>
         </div>
