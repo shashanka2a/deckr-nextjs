@@ -162,23 +162,6 @@ export function Features() {
           ))}
         </div>
 
-        {/* CTA Reinforcement */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl p-6 border border-teal-100 hover:shadow-lg transition-all duration-300">
-            <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <div className="text-left">
-              <h3 className="text-xl font-bold text-slate-900">Ready to generate your pitch deck?</h3>
-              <p className="text-slate-600">Transform your idea into investor-ready slides in minutes</p>
-            </div>
-            <button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg">
-              Generate Your Pitch Deck →
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
