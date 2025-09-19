@@ -66,42 +66,42 @@ export function Features() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl text-slate-900 mb-6 font-bold">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl lg:text-5xl text-slate-900 mb-8 font-bold">
             From idea to investor-ready pitch deck
             <span className="text-teal-600"> in 3 steps</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Our AI transforms your business concept into a professional pitch deck with investor-tested layouts and funding stage–ready content.
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Our AI transforms your business concept into a professional pitch deck.
           </p>
         </div>
 
         {/* Desktop: Horizontal Timeline */}
         <div className="hidden lg:block">
-          <div className="relative max-w-6xl mx-auto">
+          <div className="relative max-w-5xl mx-auto">
             {/* Timeline line */}
-            <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-teal-200 via-teal-300 to-teal-200"></div>
+            <div className="absolute top-20 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-200 to-transparent"></div>
             
             <div className="flex justify-between items-start">
               {steps.map((step, index) => (
-                <div key={index} className="flex-1 text-center group">
+                <div key={index} className="flex-1 text-center group px-8">
                   {/* Step Icon */}
-                  <div className="relative mb-8">
-                    <div className="w-24 h-24 mx-auto bg-gradient-to-br from-slate-50 to-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-slate-100">
+                  <div className="relative mb-12">
+                    <div className="w-20 h-20 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-slate-100">
                       {step.icon}
                     </div>
                     
                     {/* Step number */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    <div className="absolute -top-3 -right-3 w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                       {step.number}
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div className="space-y-4 max-w-xs mx-auto">
-                    <div className="inline-flex items-center px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">
+                  <div className="space-y-6">
+                    <div className="inline-flex items-center px-4 py-2 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100">
                       {step.subtitle}
                     </div>
                     
@@ -109,7 +109,7 @@ export function Features() {
                       {step.title}
                     </h3>
                     
-                    <p className="text-slate-600 leading-relaxed text-sm">
+                    <p className="text-slate-600 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -120,24 +120,24 @@ export function Features() {
         </div>
 
         {/* Mobile: Vertical Stack */}
-        <div className="lg:hidden space-y-12">
+        <div className="lg:hidden space-y-16">
           {steps.map((step, index) => (
             <div key={index} className="text-center group">
               {/* Step Icon */}
               <div className="relative mb-8">
-                <div className="w-24 h-24 mx-auto bg-gradient-to-br from-slate-50 to-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-slate-100">
+                <div className="w-20 h-20 mx-auto bg-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-slate-100">
                   {step.icon}
                 </div>
                 
                 {/* Step number */}
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                <div className="absolute -top-3 -right-3 w-7 h-7 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {step.number}
                 </div>
               </div>
 
               {/* Content */}
-              <div className="space-y-4">
-                <div className="inline-flex items-center px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">
+              <div className="space-y-6">
+                <div className="inline-flex items-center px-4 py-2 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100">
                   {step.subtitle}
                 </div>
                 
@@ -145,17 +145,17 @@ export function Features() {
                   {step.title}
                 </h3>
                 
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed max-w-md mx-auto">
                   {step.description}
                 </p>
               </div>
 
               {/* Step separator (except for last item) */}
               {index < steps.length - 1 && (
-                <div className="mt-12 flex items-center justify-center">
-                  <div className="w-16 h-px bg-teal-200"></div>
-                  <div className="mx-4 w-2 h-2 bg-teal-300 rounded-full"></div>
-                  <div className="w-16 h-px bg-teal-200"></div>
+                <div className="mt-16 flex items-center justify-center">
+                  <div className="w-12 h-px bg-teal-200"></div>
+                  <div className="mx-6 w-2 h-2 bg-teal-300 rounded-full"></div>
+                  <div className="w-12 h-px bg-teal-200"></div>
                 </div>
               )}
             </div>
