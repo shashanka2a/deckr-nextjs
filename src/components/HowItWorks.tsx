@@ -4,21 +4,21 @@ export function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Choose a template",
-      description: "Start with professionally designed templates or create from scratch. Our smart library adapts to your content.",
-      highlight: "Template Library"
+      title: "Describe your idea",
+      description: "Tell our AI about your business concept, target market, and funding goals in simple terms.",
+      highlight: "AI Input"
     },
     {
       number: "02", 
-      title: "Edit & collaborate",
-      description: "Use our intuitive drag-and-drop editor to bring your story to life. Invite team members to collaborate in real-time.",
-      highlight: "Real-time Editing"
+      title: "AI generates content",
+      description: "Our AI analyzes your idea and creates investor-ready slides with market research and financial projections.",
+      highlight: "Smart Generation"
     },
     {
       number: "03",
-      title: "Share instantly",
-      description: "Share your presentation with a simple link or download in multiple formats. Track engagement with analytics.",
-      highlight: "One-click Sharing"
+      title: "Export & present",
+      description: "Download your professional pitch deck in PDF or presentation format, ready for investor meetings.",
+      highlight: "Instant Export"
     }
   ];
 
@@ -27,10 +27,10 @@ export function HowItWorks() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl text-slate-900 mb-6 font-bold">
-            How it works
+            How AI pitch generation works
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Create stunning presentations in three simple steps.
+            Transform your business idea into a professional pitch deck in three simple steps.
           </p>
         </div>
 

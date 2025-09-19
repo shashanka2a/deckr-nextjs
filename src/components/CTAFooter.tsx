@@ -12,17 +12,17 @@ export function CTAFooter() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-5xl lg:text-6xl text-white mb-6 leading-tight font-bold">
-            Turn your ideas into investor-ready decks in minutes.
+            Ready to pitch your startup idea?
           </h2>
           
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of creators who trust Deckr to bring their presentations to life. 
-            Start creating today—no credit card required.
+            Let our AI transform your business concept into a professional pitch deck. 
+            Start generating today—no credit card required.
           </p>
 
           <div className="flex justify-center mb-8">
-            <Button className="bg-teal-600 hover:bg-teal-700 text-white px-12 py-4 text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl font-bold">
-              Start Free
+            <Button className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white px-12 py-4 text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl font-bold hover-glow">
+              Generate Pitch Deck
             </Button>
           </div>
 

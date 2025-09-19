@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Deckr - Create decks in minutes, not hours",
-  description: "Build stunning presentations with drag & drop simplicity. Collaborate in real-time and share instantly. Start free today.",
-  keywords: ["presentations", "design", "collaboration", "storytelling", "slides", "fast", "simple"],
+  title: "Deckr - AI-Powered Pitch Deck Generator",
+  description: "Transform your business idea into an investor-ready pitch deck with AI. Generate professional presentations in minutes. Start free today.",
+  keywords: ["pitch deck", "AI generator", "startup", "investor", "presentation", "business plan", "funding"],
   authors: [{ name: "Deckr Team" }],
   openGraph: {
-    title: "Deckr - Create decks in minutes, not hours",
-    description: "Build stunning presentations with drag & drop simplicity. Start free today.",
+    title: "Deckr - AI-Powered Pitch Deck Generator",
+    description: "Transform your business idea into an investor-ready pitch deck with AI. Start free today.",
     type: "website",
   },
 };
