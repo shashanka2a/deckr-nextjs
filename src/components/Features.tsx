@@ -3,41 +3,51 @@ export function Features() {
     {
       icon: (
         <div className="relative">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z"/>
-          </svg>
+          <div className="w-12 h-8 bg-white rounded border-2 border-teal-200 relative">
+            <div className="absolute inset-1 bg-teal-50 rounded"></div>
+            <div className="absolute top-1 left-1 w-2 h-2 bg-teal-500 rounded animate-bounce"></div>
+            <div className="absolute top-1 right-1 w-2 h-2 bg-teal-300 rounded animate-bounce delay-100"></div>
+            <div className="absolute bottom-1 left-1 w-2 h-2 bg-teal-400 rounded animate-bounce delay-200"></div>
+          </div>
           <div className="absolute -top-1 -right-1 w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
         </div>
       ),
       title: "Fast & Simple",
-      description: "Drag & drop editor, smart templates, and AI assistance make creating presentations effortless.",
-      features: ["Drag & Drop", "Templates", "AI Help"]
+      description: "Drag & drop editor with smart templates and AI assistance for effortless creation.",
+      features: ["Drag & Drop Editor", "AI-Powered Templates"]
     },
     {
       icon: (
         <div className="relative">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-          </svg>
+          <div className="w-12 h-8 bg-white rounded border-2 border-green-200 relative">
+            <div className="absolute inset-1 bg-green-50 rounded"></div>
+            <div className="absolute top-1 left-1 w-2 h-2 bg-green-500 rounded animate-pulse"></div>
+            <div className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded animate-pulse delay-500"></div>
+            <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-green-300 rounded animate-bounce"></div>
+          </div>
           <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
         </div>
       ),
       title: "Collaborative",
-      description: "Work together seamlessly with real-time editing, instant sharing, and team feedback.",
-      features: ["Real-time Editing", "Team Sharing", "Live Comments"]
+      description: "Real-time editing with instant sharing and seamless team collaboration.",
+      features: ["Real-time Editing", "Instant Sharing"]
     },
     {
       icon: (
         <div className="relative">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-          </svg>
+          <div className="w-12 h-8 bg-white rounded border-2 border-blue-200 relative">
+            <div className="absolute inset-1 bg-blue-50 rounded"></div>
+            <div className="absolute top-1 left-1 w-2 h-2 bg-blue-500 rounded"></div>
+            <div className="absolute top-1 right-1 w-2 h-2 bg-blue-300 rounded"></div>
+            <div className="absolute bottom-1 left-1 w-2 h-2 bg-blue-400 rounded"></div>
+            <div className="absolute top-0 right-0 w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
+          </div>
           <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
         </div>
       ),
       title: "Secure",
-      description: "Enterprise-grade security with private sharing, detailed analytics, and data protection.",
-      features: ["Private Sharing", "Analytics", "Data Protection"]
+      description: "Enterprise-grade security with private sharing and detailed analytics.",
+      features: ["Private Sharing", "Analytics Dashboard"]
     }
   ];
 
@@ -54,7 +64,7 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <div 
               key={index}
