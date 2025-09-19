@@ -66,127 +66,95 @@ export function Features() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-teal-50/30">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        {/* Enhanced Header */}
-        <div className="text-center mb-24">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 rounded-full text-sm font-semibold border border-teal-100 mb-8 shadow-sm">
-            <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-            </svg>
-            AI-Powered Process
+        {/* Clean Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-teal-50 text-teal-700 rounded-full text-sm font-medium mb-6">
+            <div className="w-2 h-2 bg-teal-500 rounded-full mr-2"></div>
+            How it works
           </div>
-          <h2 className="text-5xl lg:text-6xl text-slate-900 mb-8 font-bold leading-tight">
+          <h2 className="text-4xl lg:text-5xl text-slate-900 mb-6 font-bold leading-tight">
             From idea to investor-ready pitch deck
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600"> in 3 steps</span>
+            <span className="text-teal-600"> in 3 steps</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Our AI transforms your business concept into a professional pitch deck with investor-tested layouts and compelling visuals.
           </p>
         </div>
 
-        {/* Vertical Timeline - All Screen Sizes */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Vertical Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-200 via-teal-300 to-teal-400 rounded-full hidden lg:block"></div>
-            
-            <div className="space-y-24">
-              {steps.map((step, index) => (
-                <div key={index} className="relative group">
-                  {/* Timeline Node */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-teal-500 to-blue-500 rounded-full border-4 border-white shadow-lg z-10 hidden lg:block group-hover:scale-125 transition-transform duration-300"></div>
-                  
-                  {/* Content Container */}
-                  <div className={`flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                    {/* Icon Section */}
-                    <div className="flex-shrink-0">
-                      <div className="relative group-hover:scale-105 transition-all duration-500">
-                        <div className="w-32 h-24 bg-white rounded-3xl flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 border border-slate-100 group-hover:border-teal-200">
-                          {step.icon}
-                        </div>
-                        
-                        {/* Step Number Badge */}
-                        <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
-                          {step.number}
-                        </div>
-                      </div>
-                    </div>
+        {/* Simplified Steps Layout */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            {steps.map((step, index) => (
+              <div key={index} className="relative group">
+                {/* Step Number */}
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg">
+                    {step.number}
+                  </div>
+                  {index < steps.length - 1 && (
+                    <div className="hidden lg:block absolute left-full top-1/2 transform -translate-y-1/2 w-12 h-px bg-gradient-to-r from-teal-300 to-transparent"></div>
+                  )}
+                </div>
 
-                    {/* Content Section */}
-                    <div className="flex-1 text-center lg:text-left">
-                      <div className="space-y-6">
-                        {/* Subtitle Badge */}
-                        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-50 to-blue-50 text-teal-700 rounded-full text-sm font-semibold border border-teal-100 shadow-sm group-hover:shadow-md transition-all duration-300">
-                          <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 animate-pulse"></div>
-                          {step.subtitle}
-                        </div>
-                        
-                        {/* Title */}
-                        <h3 className="text-3xl lg:text-4xl text-slate-900 font-bold leading-tight group-hover:text-teal-700 transition-colors duration-300">
-                          {step.title}
-                        </h3>
-                        
-                        {/* Description */}
-                        <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 group-hover:text-slate-700 transition-colors duration-300">
-                          {step.description}
-                        </p>
-
-                        {/* Inline Mini CTA */}
-                        <div className="pt-4">
-                          {index === 0 && (
-                            <button className="inline-flex items-center px-6 py-3 bg-white border-2 border-teal-200 text-teal-700 rounded-full text-sm font-semibold hover:bg-teal-50 hover:border-teal-300 transition-all duration-300 shadow-sm hover:shadow-md">
-                              <span className="mr-2">Try Input Demo</span>
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </svg>
-                            </button>
-                          )}
-                          {index === 1 && (
-                            <button className="inline-flex items-center px-6 py-3 bg-white border-2 border-teal-200 text-teal-700 rounded-full text-sm font-semibold hover:bg-teal-50 hover:border-teal-300 transition-all duration-300 shadow-sm hover:shadow-md">
-                              <span className="mr-2">See Sample Output</span>
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </svg>
-                            </button>
-                          )}
-                          {index === 2 && (
-                            <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-full text-sm font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
-                              <span className="mr-2">Generate My Pitch Deck</span>
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                              </svg>
-                            </button>
-                          )}
-                        </div>
-                      </div>
+                {/* Step Content */}
+                <div className="text-center">
+                  {/* Icon */}
+                  <div className="mb-6 flex justify-center">
+                    <div className="w-20 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg border border-slate-100 group-hover:shadow-xl transition-all duration-300">
+                      {step.icon}
                     </div>
                   </div>
 
-                  {/* Step Separator */}
-                  {index < steps.length - 1 && (
-                    <div className="mt-24 flex items-center justify-center lg:hidden">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-16 h-px bg-gradient-to-r from-transparent to-teal-300"></div>
-                        <div className="w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
-                        <div className="w-16 h-px bg-gradient-to-l from-transparent to-teal-300"></div>
-                      </div>
-                    </div>
-                  )}
+                  {/* Subtitle */}
+                  <div className="inline-flex items-center px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-medium mb-4">
+                    {step.subtitle}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    {step.description}
+                  </p>
+
+                  {/* CTA */}
+                  <div className="flex justify-center">
+                    {index === 0 && (
+                      <button className="px-4 py-2 text-sm font-medium text-teal-600 hover:text-teal-700 border border-teal-200 rounded-lg hover:bg-teal-50 transition-all duration-200">
+                        Try Demo
+                      </button>
+                    )}
+                    {index === 1 && (
+                      <button className="px-4 py-2 text-sm font-medium text-teal-600 hover:text-teal-700 border border-teal-200 rounded-lg hover:bg-teal-50 transition-all duration-200">
+                        See Sample
+                      </button>
+                    )}
+                    {index === 2 && (
+                      <button className="px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-lg font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg">
+                        Generate My Deck
+                      </button>
+                    )}
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Onboarding CTA */}
-        <div className="text-center mt-24">
-          <div className="inline-flex items-center px-8 py-4 bg-white border-2 border-teal-300 text-teal-700 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer hover:bg-teal-50 hover:border-teal-400">
-            <span className="mr-3">See It in Action</span>
-            <svg className="w-5 h-5 transform hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        {/* Primary CTA */}
+        <div className="text-center mt-16">
+          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span className="mr-2">Start Creating Your Pitch Deck</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </div>
+          </button>
+          <p className="text-sm text-slate-500 mt-3">No credit card required • Free to start</p>
         </div>
 
       </div>
